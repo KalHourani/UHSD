@@ -1,4 +1,4 @@
-assignment #2
+#Assignment 2
 COSC 6353 / 4353
 
 Due Date: 03/01/2019 23:59:59
