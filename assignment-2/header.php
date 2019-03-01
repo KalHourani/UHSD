@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|VT323" rel="stylesheet">
-    <title>University of Houston Portal</title>
+    <title>Fakename Oil & Gas</title>
 </head>
 <body style="background:#4f43a5">
 
