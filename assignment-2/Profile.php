@@ -36,11 +36,11 @@ require_once('includes/function.php');
                         </div>
                         <div class="form-group">
                             <label for="dob" class="float-left">Enter your Address *</label>
-                            <input type="text" class="form-control" placeholder="Address 1" name="DOB" classname="form-control">
-							<input type="text" class="form-control" placeholder="Address 2" name="DOB" classname="form-control">
-							<input type="text" class="form-control" placeholder="City" name="DOB" classname="form-control">
-							<input type="text" class="form-control" placeholder="State" name="DOB" classname="form-control">
-							<input type="text" class="form-control" placeholder="Zipcode" name="DOB" classname="form-control">
+                            <input type="text" class="form-control" placeholder="Address 1" name="AddressField" classname="form-control">
+							<input type="text" class="form-control" placeholder="Address 2" name="AddressField" classname="form-control">
+							<input type="text" class="form-control" placeholder="City" name="AddressField" classname="form-control">
+							<input type="text" class="form-control" placeholder="State" name="AddressField" classname="form-control">
+							<input type="text" class="form-control" placeholder="Zipcode" name="AddressField" classname="form-control">
                         </div>
                         <div class="form-group">
                             <label for="email" class="float-left">Enter your email address</label>
