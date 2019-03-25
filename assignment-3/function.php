@@ -54,6 +54,7 @@
                     <a href="login.php">Login Now</a>
                     </div>';
                 }
+            return $Message;
     }
 
     // login function
@@ -83,7 +84,7 @@
         {
             header('location:index.php');
         }
-
+        return $Message;
     }
 
 ?>
