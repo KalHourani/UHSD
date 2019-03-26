@@ -3,8 +3,7 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 require 'function.php';
-
-final class RegisterTest extends TestCase
+class RegisterTest extends TestCase
 {
     public function testEmpty()
     {
@@ -25,6 +24,12 @@ final class RegisterTest extends TestCase
         $this->assertSame($message, "Please enter a valid email address");
     }
     public function testUserTaken()
+    {
+        $_GET['User Taken'] = "";
+        $message = RegisterFunc();
+        $this->assertSame($message, "Username is already taken");
+    }
+    public function testEmailTaken()
     {
         $_GET['Email Taken'] = "";
         $message = RegisterFunc();
@@ -48,9 +53,9 @@ final class RegisterTest extends TestCase
         $message = RegisterFunc();
         $this->assertSame($message, "You have successfully made an account!");
     }
-}
+};
 
-final class LoginTest extends TestCase
+class LoginTest extends TestCase
 {
     public function testEmpty()
     {
@@ -70,7 +75,15 @@ final class LoginTest extends TestCase
         $message = LoginFunc();
         $this->assertSame($message, "This Username and Password combination is invalid");
     }
+    public function testEmployeeID()
+    {
+
+        $_SESSION['EmployeeID'] = "";
+        LoginFunc();
+        $headers = xdebug_get_headers();
+        print_r($headers);
+        $this->assertSame($headers, "location:index.php");
+    }
 }
 
-
-
+?>
