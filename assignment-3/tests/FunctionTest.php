@@ -8,37 +8,44 @@ final class RegisterTest extends TestCase
 {
     public function testEmpty()
     {
-        $message = RegisterFunc($_GET['EMPTY']);
+        $_GET['Empty'] = "";
+        $message = RegisterFunc();
         $this->assertSame($message, "Please fill in the blanks");
     }
     public function testValidCharacter()
     {
-        $message = RegisterFunc($_GET['characters']);
+        $_GET['characters'] = "";
+        $message = RegisterFunc();
         $this->assertSame($message, "Please enter valid characters");
     }
     public function testValidEmail()
     {
-        $message = RegisterFunc($_GET['ValidEmail']);
+        $_GET['ValidEmail'] = "";
+        $message = RegisterFunc();
         $this->assertSame($message, "Please enter a valid email address");
     }
     public function testUserTaken()
     {
-        $message = RegisterFunc($_GET['Email Taken']);
+        $_GET['Email Taken'] = "";
+        $message = RegisterFunc();
         $this->assertSame($message, "Email is already taken");
     }
     public function testValidFormat()
     {
-        $message = RegisterFunc($_GET['Invalid_Format']);
+        $_GET['Invalid_Format'] = "";
+        $message = RegisterFunc();
         $this->assertSame($message, "Invalid image format");
     }
     public function testTooLarge()
     {
-        $message = RegisterFunc($_GET['Too_Large']);
+        $_GET['Too_Large'] = "";
+        $message = RegisterFunc();
         $this->assertSame($message, "Image too large");
     }
     public function testSuccess()
     {
-        $message = RegisterFunc($_GET['Success']);
+        $_GET['Success'] = "";
+        $message = RegisterFunc();
         $this->assertSame($message, "You have successfully made an account!");
     }
 }
@@ -47,38 +54,21 @@ final class LoginTest extends TestCase
 {
     public function testEmpty()
     {
-        $message = LoginFunc($_GET['empty']);
+        $_GET['empty'] = "";
+        $message = LoginFunc();
         $this->assertSame($message, "Please enter your information in the blanks.");
     }
     public function testValidUsername()
     {
-        $message = LoginFunc($_GET['invalid']);
+        $_GET['invalid'] = "";
+        $message = LoginFunc();
         $this->assertSame($message, "The Username is invalid");
     }
-    public function testValidEmail()
+    public function testValidUsernameAndEmail()
     {
-        $message = LoginFunc($_GET['password_invalid']);
+        $_GET['password_invalid'] = "";
+        $message = LoginFunc();
         $this->assertSame($message, "This Username and Password combination is invalid");
-    }
-    public function testUserTaken()
-    {
-        $message = RegisterFunc($_GET['Email Taken']);
-        $this->assertSame($message, "Email is already taken");
-    }
-    public function testValidFormat()
-    {
-        $message = RegisterFunc($_GET['Invalid_Format']);
-        $this->assertSame($message, "Invalid image format");
-    }
-    public function testTooLarge()
-    {
-        $message = RegisterFunc($_GET['Too_Large']);
-        $this->assertSame($message, "Image too large");
-    }
-    public function testSuccess()
-    {
-        $message = RegisterFunc($_GET['Success']);
-        $this->assertSame($message, "You have successfully made an account!");
     }
 }
 
